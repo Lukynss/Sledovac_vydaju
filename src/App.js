@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from "./components/Header.js"
+import Tasks from "./components/Tasks";
+import Task from "./components/Task";
 
 function App() {
+    const Tasks = [
+        {
+        id: 1,
+        name: "Vynést koše",
+        description: "Už smrdí"
+        },
+        {
+        id: 2,
+        name: "Umýt okna",
+        description: "Není vidět ven"
+        }
+    ]
+
+    const addTask = (newTask) => {
+        setTasks([...tasks, newTask]);
+    }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App container">
+        <Header text="To-do List" className="mb-3 mt-3"/>
+        <Tasks tasks={tasks} />
     </div>
   );
 }
