@@ -25,10 +25,14 @@ function App() {
         setTasks([...tasks, newTask]);
     }
 
+    const removeTask = (id) => {
+        setTasks(tasks.filter((task) => task.id !== id));
+    }
+
   return (
     <div className="App container">
         <Header text="To-do List" className="mb-3 mt-3"/>
-        <Tasks tasks={tasks} />
+        <Tasks tasks={tasks} Delete={removeTask()} />
     </div>
   );
 }
