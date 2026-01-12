@@ -22,6 +22,8 @@ function App() {
     )
 
     const addTask = (newTask) => {
+        let newId = Math.max(...tasks.map(task => task.id)) + 1;
+        newTask.id = newId;
         setTasks([...tasks, newTask]);
     }
 

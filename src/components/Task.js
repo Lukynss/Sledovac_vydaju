@@ -5,6 +5,7 @@ function Task({Name, Description, Id, Delete}) {
             <div className="col-9">
                 <h3>{Name}</h3>
                 <p>{Description}</p>
+                <p>{Id}</p>
             </div>
             <div className="col-3">
                <button onClick={() => Delete(Id)} className="btn btn-danger btn-lg" >🗑️</button>
