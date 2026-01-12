@@ -1,5 +1,5 @@
 
-function AddTask({}) {
+function AddTask({onSubmit}) {
     return (
         <div className="">
             <form action="" className="form d-flex flex-column align-items-start" onSubmit={AddTask}>

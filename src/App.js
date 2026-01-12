@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="App container p-5">
         <Header text="To-do List" className="mb-3 mt-3"/>
-        <AddTask />
+        <AddTask onSubmit={addTask} />
         <Tasks tasks={tasks} Delete={removeTask} />
     </div>
   );
