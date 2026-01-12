@@ -1,7 +1,6 @@
 import './App.css';
 import Header from "./components/Header.js"
 import Tasks from "./components/Tasks";
-import Task from "./components/Task";
 
 import {useState, useEffect} from "react";
 
@@ -32,7 +31,7 @@ function App() {
   return (
     <div className="App container">
         <Header text="To-do List" className="mb-3 mt-3"/>
-        <Tasks tasks={tasks} Delete={removeTask()} />
+        <Tasks tasks={tasks} Delete={removeTask} />
     </div>
   );
 }
