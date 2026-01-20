@@ -8,13 +8,13 @@ function Todolist () {
         [
             {
                 id: 1,
-                name: "Vynést koše",
-                description: "Už smrdí"
+                name: "Phone",
+                description: "500"
             },
             {
                 id: 2,
-                name: "Umýt okna",
-                description: "Není vidět ven"
+                name: "car",
+                description: "5000"
             }
         ]
     )
@@ -29,9 +29,14 @@ function Todolist () {
         setTasks(tasks.filter((task) => task.id !== id));
     }
 
+    const total =tasks.reduce((sum, task) => {
+        return sum + Number(task.description);
+    },0 )
+
     return (
         <div className="App container p-5">
-            <Header text="To-do List" className="mb-3 mt-3"/>
+            <Header text="Sledovač výdajů" className="mb-3 mt-3"/>
+            <h2> Total : {total} Kč</h2>
             <AddTask onSubmit={addTask} />
             <Tasks tasks={tasks} Delete={removeTask} />
         </div>

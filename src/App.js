@@ -13,7 +13,7 @@ function App() {
         <article>
             <nav>
                 <Link to="/">Home</Link>
-                <Link to="/todo">To-do list</Link>
+                <Link to="/todo">                    Sledovač výdajů </Link>
             </nav>
 
                 <Routes>
